@@ -159,8 +159,11 @@ ul{
     }
 }
 @media (max-width:500px){
+    #nn{
+        display: none;
+    }
     #reset{
-        width:12vw;
+        width:20vw;
         height:6vh;
         border-radius: 5px;
         border:0.1em solid rgb(9,148,255);

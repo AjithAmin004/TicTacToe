@@ -8,10 +8,6 @@ let turn = "X";
 const ChangeTurn = () =>{
     return turn==="X"?"0":"X";
 }
-var s = window.matchMedia("(max-width: 500px)")
-    if(s.matches){
-        document.getElementById("Welcome").style.display="none";
-    }
 
 const Checkwin = () =>{
     let boxtext = document.getElementsByClassName("box");
