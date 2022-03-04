@@ -8,7 +8,10 @@ let turn = "X";
 const ChangeTurn = () =>{
     return turn==="X"?"0":"X";
 }
-
+var s = window.matchMedia("(max-width: 500px)")
+    if(s.matches){
+        document.getElementById("Welcome").style.display="none";
+    }
 
 const Checkwin = () =>{
     let boxtext = document.getElementsByClassName("box");
@@ -24,11 +27,16 @@ const Checkwin = () =>{
    ]
    wins.forEach(e =>{
 if((boxtext[e[0]].innerText ===  boxtext[e[1]].innerText) && (boxtext[e[0]].innerText ===  boxtext[e[2]].innerText) && (boxtext[e[0]].innerText !== ''))
-{  
+{    
+    var x = window.matchMedia("(max-width: 1000px)")
+    if(x.matches){
+        document.querySelector(".line").style.display="none";
+    }else{
+        document.querySelector(".line").style.display="block";
+    }
     winner=boxtext[e[0]].innerText;
     document.getElementById("winner").innerText=winner+" is the winner"
     victory.play();
-    document.querySelector(".line").style.display="block";
     document.querySelector(".line").style.left = `${e[3]}vw`;
     document.querySelector(".line").style.top =`${e[4]}vw`;
     document.querySelector(".line").style.transform = `rotate(${e[5]}deg)`;

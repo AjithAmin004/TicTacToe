@@ -131,6 +131,9 @@ ul{
 
 
 @media (max-width:1000px){
+   .line{
+       display:"none";
+   }
     #reset{
         width:8vw;
         border-radius: 5px;
@@ -157,7 +160,8 @@ ul{
 }
 @media (max-width:500px){
     #reset{
-        width:9vw;
+        width:12vw;
+        height:6vh;
         border-radius: 5px;
         border:0.1em solid rgb(9,148,255);
         margin: 0px 70%;
